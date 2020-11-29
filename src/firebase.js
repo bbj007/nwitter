@@ -2,13 +2,13 @@ import * as firebase from "firebase/app";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCZep6eOtnLEQg-rPcPxfjcCwk3Wx85Rtk",
-    authDomain: "nwitter-413ff.firebaseapp.com",
-    databaseURL: "https://nwitter-413ff.firebaseio.com",
-    projectId: "nwitter-413ff",
-    storageBucket: "nwitter-413ff.appspot.com",
-    messagingSenderId: "206620826741",
-    appId: "1:206620826741:web:3b5f60c51c384473652c3c"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGIN_ID,
+    appId: process.env.REACT_APP_APP_ID,    
 };
 
 export default firebaseConfig.initializeApp(firebaseConfig);
