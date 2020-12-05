@@ -1,3 +1,4 @@
+import { dbService } from 'fbase'
 import React, { useState } from 'react'
 
 const Home = () => {
@@ -5,6 +6,11 @@ const Home = () => {
 
   const onSubmit = (event) => {
     event.preventDefault()
+    dbService.collection('nweets').add({
+      nweet,
+      createdAt: Date.now(),
+    })
+    setNweet('')
   }
   const onChange = (event) => {
     const {
